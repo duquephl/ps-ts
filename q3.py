@@ -28,13 +28,7 @@ def analisar_faturamento(faturamento_json):
         "dias_acima_da_media": dias_acima_da_media
     }
 
-faturamento_json = '''
-[
-    {"dia": 1, "valor": 1000},
-    {"dia": 2, "valor": 1500},
-    {"dia": 3, "valor": 0},
-    {"dia": 4, "valor": 2000}
-]
-'''
+#ler o arquivo dados.json
+faturamento_json = open("dados.json").read()
 
 print(analisar_faturamento(faturamento_json))
